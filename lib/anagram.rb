@@ -1,13 +1,13 @@
 # Your code goes here!
 class Anagram
-attr_accessor :word, :match
+attr_accessor :word
 # @@all = []
 
 
 def initialize(word)
 @word = word
 # @@all.push(word)
-@match = []
+# @match = []
 end
 
 def match(matchlist)
@@ -23,15 +23,15 @@ matchlistsplit[position] = splitlistwordarray
 }
 # 3.loop through matchlistsplit.hash and compare to word.array
 
-
+match = []
 matchlistsplit.collect do |position, array|
   if wordarray == array
-    @match << matchlist[position]
+    match << matchlist[position]
   end
 end
 
-  puts "#{@match} final word"
-  @match
+  puts "#{match} final word"
+  match
 end
 
 
